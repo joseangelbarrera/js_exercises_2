@@ -6,7 +6,35 @@ Write a function translate() that will translate a text into "rövarspråket". T
 
 ***solution***
 
-```ooooo
+```
+var consonant = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'ñ', 'p', 'q', 'r', 's', 't', 'w', 'x', 'y', 'z']
+// translate = function (texto) {
+
+// I put the string into an array to apply his methods
+
+// I create a fiunction  that compare letters searching for consonants and changing the findings for a new string
+
+var translate = function (texto) {
+  var newText = texto.split('')
+
+  for (var j = 0; j < newText.length; j++) {
+    var letter = newText[j]
+    var newLetter = letter
+    for (var i = 0; i < consonant.length; i++) {
+      if (consonant[i] === letter) {
+        newLetter = letter + 'o' + letter
+      } else {
+        newLetter === newText[j]
+      }
+    }
+    newText.splice(j, 1, newLetter)
+  }
+  var translation = newText.join()
+  console.log('This is the original text: \n' + texto + '\n')
+  console.log('This is the translation: \n' + translation.replace(/,/g, ''))
+}
+
+translate('No puede ser que esto se haga así tiene que haber un truco para hacerlo más rápidamente.')
 ```
 
 
@@ -16,7 +44,26 @@ Define a function sum() and a function multiply() that sums and multiplies (resp
 
 ***solution***
 
-```oooo
+```
+function suma () {
+  arguments = []
+  return arguments.reduce(function (accumulator, currentValue) { return accumulator + currentValue }, 0)
+}
+
+console.log(suma(4, 5, 6, 7, 8, 9))
+
+var sum = function () {
+  return [4, 5, 6, 7, 8, 646, 89, 54764, 9].reduce(function (accumulator, currentValue) { return accumulator + currentValue }, 0)
+}
+
+console.log(sum())
+
+var multiply = function () {
+  return [4, 5, 6, 7, 8, , 646, 89, 54764, 9].reduce(function (accumulator, currentValue) { return accumulator * currentValue }, 1)
+}
+
+console.log(multiply())
+
 ```
 
 
