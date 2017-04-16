@@ -73,7 +73,8 @@ Define a function reverse() that computes the reversal of a string. For example,
 
 ***solution***
 
-```function reverse (text) {
+```
+function reverse (text) {
   var textArray = text.split('').reverse().toString().replace(/,/g, '')
   return textArray
 }
