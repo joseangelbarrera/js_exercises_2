@@ -35,6 +35,9 @@ var translate = function (texto) {
 }
 
 translate('No puede ser que esto se haga así tiene que haber un truco para hacerlo más rápidamente.')
+
+another solutoion (the beter from our Teacher JuanMa):
+function translate (text) { return text.replace(/([b-df-hj-np-tv-xz])/g, '$1o$1') }
 ```
 
 
@@ -89,7 +92,24 @@ Represent a small bilingual lexicon as a Javascript object in the following fash
 
 ***solution***
 
-```oooo
+```
+// First, I create the object
+
+var objectTranslate = {'merry': 'god', 'christmas': 'jul', 'and': 'och', 'happy': 'gott', 'new': 'nytt', 'year': 'år'}
+
+// I convert the values of the Onject into an Array:
+
+var translatePreview = Object.keys(objectTranslate).map(function (key) { return objectTranslate[key] })
+
+// ==> [ 'god', 'jul', 'och', 'gott', 'nytt', 'år' ]
+
+// I create a variable that collet all the elements of the array
+// into a string with the method reduce
+
+var translate = function() {return translatePreview.reduce(function (preview, current, index) { return preview + ' ' + current })}
+
+
+// ==> god jul och gott nytt år
 ```
 
 
