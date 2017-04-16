@@ -44,26 +44,12 @@ Define a function sum() and a function multiply() that sums and multiplies (resp
 
 ***solution***
 
-```
-function suma () {
-  arguments = []
-  return arguments.reduce(function (accumulator, currentValue) { return accumulator + currentValue }, 0)
+```function reverse (text) {
+  var textArray = text.split('').reverse().toString().replace(/,/g, '')
+  return textArray
 }
 
-console.log(suma(4, 5, 6, 7, 8, 9))
-
-var sum = function () {
-  return [4, 5, 6, 7, 8, 646, 89, 54764, 9].reduce(function (accumulator, currentValue) { return accumulator + currentValue }, 0)
-}
-
-console.log(sum())
-
-var multiply = function () {
-  return [4, 5, 6, 7, 8, , 646, 89, 54764, 9].reduce(function (accumulator, currentValue) { return accumulator * currentValue }, 1)
-}
-
-console.log(multiply())
-
+console.log(reverse('Malta es uno de esos países en los que vivir es muy divertido'))
 ```
 
 
